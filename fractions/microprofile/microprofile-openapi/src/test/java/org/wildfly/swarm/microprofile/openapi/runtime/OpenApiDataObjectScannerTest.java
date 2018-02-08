@@ -25,6 +25,7 @@ import org.junit.Test;
 import org.wildfly.swarm.microprofile.openapi.io.OpenApiSerializer;
 import org.wildfly.swarm.microprofile.openapi.models.ComponentsImpl;
 import org.wildfly.swarm.microprofile.openapi.models.OpenAPIImpl;
+import org.wildfly.swarm.microprofile.openapi.runtime.entity.Booking2;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,13 +41,13 @@ public class OpenApiDataObjectScannerTest {
     public void test() throws IOException {
         Indexer indexer = new Indexer();
 
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/Foo.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/Bar.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/Fuzz.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/BazEnum.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/KustomPair.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/Booking2.class");
-        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/CreditCard2.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/Foo.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/Bar.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/BuzzLinkedList.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/Fuzz.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/BazEnum.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/KustomPair.class");
+        index(indexer, "org/wildfly/swarm/microprofile/openapi/runtime/entity/Booking2.class");
         index(indexer, "org/eclipse/microprofile/openapi/apps/airlines/model/CreditCard.class");
         index(indexer, "org/eclipse/microprofile/openapi/apps/airlines/model/Flight.class");
         index(indexer, "org/eclipse/microprofile/openapi/apps/airlines/model/Airline.class");

@@ -16,8 +16,6 @@
 
 package org.wildfly.swarm.microprofile.openapi.runtime;
 
-import java.io.File;
-
 import org.eclipse.microprofile.config.Config;
 import org.jboss.jandex.ClassInfo;
 import org.jboss.jandex.DotName;
@@ -33,6 +31,8 @@ import org.wildfly.microprofile.config.WildFlyConfigBuilder;
 import org.wildfly.swarm.jaxrs.JAXRSArchive;
 import org.wildfly.swarm.microprofile.openapi.io.OpenApiSerializer;
 import org.wildfly.swarm.microprofile.openapi.io.OpenApiSerializer.Format;
+
+import java.io.File;
 
 /**
  * Runs the {@link OpenApiDeploymentProcessor} against the Apiman Manager API war.
@@ -84,6 +84,7 @@ public class ApimanManagerApiDeploymentTest {
 //        String expected = loadResource(getClass().getResource(expectedResource));
         String expected = "{}";
 
+        System.out.println(actual);
         assertJsonEquals(expected, actual);
     }
 
